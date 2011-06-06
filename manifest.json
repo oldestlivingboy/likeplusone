@@ -21,7 +21,7 @@
     "matches": ["http://*/*", "https://*/*"],
     "css": ["content.css"],
     "js": ["jquery.js", "content.js"],
-    "run_at": "document_end",
+    "run_at": "document_start",
     "all_frames": true
   }]
 }

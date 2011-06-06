@@ -46,22 +46,22 @@ var like = 'www.facebook.com/plugins/like.php';
 /* The +1 timeout, in milliseconds. */
 var timeout = 2000;
 
-$('[src*="' + like + '"]').addClass('likeplusone');
+/* Splits the Like stream and simulates a click on the +1 button. */
+$(function() {
+  $('[src*="' + like + '"]').addClass('likeplusone');
 
-/* Splits the like stream. */
-$('.connect_widget_like_button').
-  click(function() { likeplusone(true); }).
-  children('.liketext').html('');
+  $('.connect_widget_like_button').
+    click(function() { likeplusone(true); }).
+    children('.liketext').html('');
 
-/* Splits the unlike stream. */
-$('.tombstone_cross').click(function() { likeplusone(); });
+  $('.tombstone_cross').click(function() { likeplusone(); });
 
-/* Simulates a click on the +1 button. */
-setTimeout(function() {
-  if (location.hash.split('#').pop() == 'like+1') {
-    // jQuery seems to bite the bag here.
-    var click = document.createEvent('MouseEvents');
-    click.initMouseEvent('click', true, true);
-    document.getElementById('button').dispatchEvent(click);
-  }
-}, timeout);
+  setTimeout(function() {
+    if (location.hash.split('#').pop() == 'like+1') {
+      // jQuery seems to bite the bag here.
+      var click = document.createEvent('MouseEvents');
+      click.initMouseEvent('click', true, true);
+      document.getElementById('button').dispatchEvent(click);
+    }
+  }, timeout);
+});
