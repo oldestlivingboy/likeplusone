@@ -44,7 +44,7 @@ function likeplusone(likeplusoned) {
 var like = 'www.facebook.com/plugins/like.php';
 
 /* The +1 timeout, in milliseconds. */
-var timeout = 2000;
+var timeout = 5000;
 
 /* Splits the Like stream and simulates a click on the +1 button. */
 $(function() {
