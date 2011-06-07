@@ -26,12 +26,13 @@ function deserialize(object) {
 }
 
 /* The saved like+1s. */
-var likeplusones = deserialize(localStorage.likeplusones) || {};
+var likeplusones = localStorage.likeplusones || '{}';
 
 /* Adds or removes a like+1. */
 chrome.extension.onRequest.addListener(function(request) {
+  likeplusones = deserialize(likeplusones);
   var page = request.page;
   request.likeplusoned ? likeplusones[page] = Date.now() :
       delete likeplusones[page];
-  localStorage.likeplusones = JSON.stringify(likeplusones);
+  localStorage.likeplusones = likeplusones = JSON.stringify(likeplusones);
 });
