@@ -57,12 +57,12 @@
 
 .connect_widget_like_button.like_button_like .tombstone_cross {
   background-image:
-      url(chrome-extension://lpehokhlnomihmdpgoclgbapaglbclfg/likeplusone.png)
+      url(chrome-extension://lpehokhlnomihmdpgoclgbapaglbclfg/unlike+1.png)
 }
 
 .connect_widget_like_button.clearfix.like_button_no_like .liketext {
   background-image:
-      url(chrome-extension://lpehokhlnomihmdpgoclgbapaglbclfg/unlikeplusone.png);
+      url(chrome-extension://lpehokhlnomihmdpgoclgbapaglbclfg/like+1.png);
   padding-left: 0
 }
 
