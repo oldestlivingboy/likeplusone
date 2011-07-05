@@ -1,11 +1,10 @@
 {
   "name": "Like+1",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description":
       "Reduce your risk of getting carpal tunnel syndrome up to 50% by turning Like into Like+1 buttons.",
   "icons": {"48": "48.png", "128": "128.png"},
   "permissions": [
-    "background",
     "chrome://favicon/",
     "contextMenus",
     "cookies",
